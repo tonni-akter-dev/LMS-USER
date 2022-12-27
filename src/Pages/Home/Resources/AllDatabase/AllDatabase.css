@@ -1,0 +1,20 @@
+.database>a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    background-color: black;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+.database_div{
+    margin-top: 50px;
+    /* #F2F2F2---full bg
+    #FFFFFF0
+    */
+    background-color: whitesmoke;
+}
+.database_bg{
+    background-color: whitesmoke;
+    padding: 50px;
+    margin-top: 20px;
+}

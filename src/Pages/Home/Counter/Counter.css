@@ -1,0 +1,31 @@
+.counters_div {
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 0 auto !important;
+    margin-bottom: 100px;
+}
+.counter_div{
+    padding: 30px 30px;
+    border-radius: 5px;
+}
+.texts{
+    font-weight: bold;
+margin: 0 auto;
+}
+.library_collections_heading{
+    width: 300px;
+ margin: 0 auto;
+    border-bottom: 2px solid #5140bb;
+}
+.p_texts{
+   display: flex;
+   justify-content: center;
+   
+}
+
+/* .finding_books{
+    width: 300px;
+    border-bottom: 2px solid #5140bb;   
+} */

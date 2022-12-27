@@ -1,0 +1,37 @@
+.search-filters{
+    background-color:#152F4F ;
+}
+
+.form-select1{
+    background-color: #121B35;
+    color: white;
+    border: 3px solid #121B35;
+}
+form input{
+    background-color: #121B35 !important;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+  }
+
+  .search-filters .form-control{
+    background-color: #121b35;
+    border-color: #0f1932;
+    color: #fff !important;
+  }
+
+  .text-dark1{
+    color: #0f1932 !important;
+    font-weight: bold;
+  }
+
+  .padding_btn{
+    padding: 6px 30px;
+    font-weight: bolder;
+  }
+
+  .box::-webkit-input-placeholder {
+    color: #fff !important;
+  }

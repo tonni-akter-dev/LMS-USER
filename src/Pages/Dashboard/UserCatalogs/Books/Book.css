@@ -1,0 +1,30 @@
+
+.myForm{
+    width: 100%;
+    /* box-shadow: 2px 3px 22px 5px rgba(30, 32, 32, 0.66);
+-webkit-box-shadow: 2px 3px 22px 5px rgba(106,120,120,0.66);
+-moz-box-shadow: 2px 3px 22px 5px rgba(106,120,120,0.66); */
+}
+.myForm input {
+    background-color: white !important;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+}
+.myForm input::placeholder { 
+    color: black;
+  font-weight: normal;
+  }
+
+.myForm .form-label{
+    margin: 0;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+@media (max-width: 575.98px) { 
+    .myForm{
+        width: 80%;
+    }
+ }

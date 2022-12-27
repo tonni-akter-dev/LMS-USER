@@ -1,0 +1,58 @@
+.login {
+    background-image: url('https://i.ibb.co/JqFQwnC/pexels-pixabay-256455.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    color: white;
+}
+
+.loginform input {
+    width: 90%;
+    height: 50px;
+    margin: 10px;
+    border: 3px solid black;
+    color: white !important;
+    font-weight: bold;
+    background-color: black;
+    opacity: .6;
+    border: 2px solid white;
+}
+
+.loginform {
+    padding-left: 40px;
+    margin: 0 auto !important;
+}
+
+.bg2 {
+    background-color: black;
+    opacity: .6;
+    width: 45%;
+    margin: 0 auto;
+    margin-top: 60px;
+    align-items: center !important;
+}
+
+.login_txt {
+    color: white;
+    font-weight: bold !important;
+}
+
+.btn_design {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+input[type=text] {
+    background-color: black;
+    opacity: .6;
+}
+
+.login_form_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}

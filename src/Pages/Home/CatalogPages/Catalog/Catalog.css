@@ -1,0 +1,20 @@
+.catalog-nav{
+display: flex;
+justify-content: space-between;
+background-color: whitesmoke;
+padding: 10px;
+border-radius: 15px;
+margin-top: 20px;
+}
+.nav_bg_2{
+    background-color: black;
+    color: white;
+    padding: 4px;
+border-radius: 5px;
+}
+.catalog-nav1{
+    background-color: whitesmoke; 
+}
+.text_bold{
+    font-weight: bold;
+}

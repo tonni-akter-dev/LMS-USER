@@ -1,0 +1,88 @@
+.notice_board{
+    /* background-color: #152F4F; */
+    background-color: #152F4F;
+    /* background-color: skyblue; */
+    color: black !important;
+    /* font-weight: bold; */
+    padding: 5px;
+}
+
+.notice{
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    font-weight: bold;
+}
+.notice:hover{
+    color: white;
+}
+.navlink_design{
+    text-decoration: none;
+    color: white;
+    color: #152F4F;
+    font-weight: bold;
+    font-size: 20px;
+}
+.nav_bg{
+    background-color: white;
+color: #152F4F;
+}
+
+.navlink_design1{
+    text-decoration: none;
+    color: #152F4F;
+    font-weight: bold;
+    margin: 8px;
+}
+.navlink_design3{
+    text-decoration: none;
+    color: #152F4F;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 8px;
+}
+.navlink_design3:hover{
+    color: white;
+  
+}
+.office_info{
+font-size: small;
+margin: 8px;
+}
+.drop_down{
+    display: block;
+    padding-top: 0px !important;
+}
+.navDesign{
+    text-decoration: none;
+    margin: 10px;
+    color: white !important;
+}
+.navDesign1{
+    color: aliceblue;
+}
+
+.dropdown::after{
+    display: none !important; 
+  }
+  .nav2-login-btn{
+    background-color: #152F4F;
+    padding: 6px 30px;
+    border: none;
+  }
+
+
+  .nav_bg1{
+    background-color: #152F4F;
+    color: white;
+  }
+  .navlink_design2{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 8px;
+}
+  .navlink_design2:hover{
+    color: white;
+   
+}
