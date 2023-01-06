@@ -1,40 +1,24 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import '../Dashboard/Dashboard.css';
-import useAuth from "../../hooks/useAuth";
-import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
 const DashboardPort = () => {
-    const { user } = useAuth();
+    const isLoggedIn = window.localStorage.getItem('loggedIn');
+    const logout = () => {
+        window.localStorage.clear();
+        window.location.href = "/login"
+    }
     return (
         <div>
             <div>
                 <button className='btn notice_board_btn'>
                     <Link to="/noticeboard" className='navlink_design1'>Notice Board</Link>
                 </button>
-                {user.email ? (
-                    <NavLink
-                        className="navDesign1 dropdown"
-                        to="/dashboard/myaccount"
-
-                    ><span className="navlink_design1"> {user.email && user.photoURL ? (
-                        <img
-                            src={user.photoURL}
-                            className="ms-3 rounded-pill"
-                            style={{ width: "30px" }}
-                            alt=""
-                        />
-                    ) : (
-                        <img
-                            src="https://i.ibb.co/gPS4kB7/women.png"
-                            className="ms-3 rounded-pill"
-                            style={{ width: "50px" }}
-                            alt=""
-                        />
-                    )}</span>
-                    </NavLink>
+                {isLoggedIn === 'true' ? (
+                    // <NavLink className="navDesign1 dropdown text-dark" to="/dashboard/myaccount">
+                    <button type="" className='btn btn-dark' onClick={logout}>Log Out</button>
+                    // </NavLink>
                 ) : (
-                    <NavLink className='navlink_design1' to="/login">Login</NavLink>)}
+                    <NavLink className='navlink_design text-dark' to="/login"> <button type="">Login</button></NavLink>)}
             </div>
             {/* second part */}
             <div className='mt-5'>
@@ -61,9 +45,9 @@ const DashboardPort = () => {
                 </table>
             </div>
             {/* third part */}
-           <div className='librarians_btn'>
-           <button className='btn btn-dark librarians_btn1'>LIBRARIANS</button>
-           </div>
+            <div className='librarians_btn'>
+                <button className='btn btn-dark librarians_btn1'>LIBRARIANS</button>
+            </div>
             <div className='mt-5 card_div' >
 
                 <div className='librarians_cards'>

@@ -1,0 +1,26 @@
+.width-table {
+    width: 60%;
+
+}
+
+.update_link1 {
+    text-decoration: none;
+    color: #152F4F;
+    font-weight: bold;
+    font-size: 18px;
+}
+.update_link1:hover {
+
+    color: #152F4F;
+
+}
+
+.update_link:hover {
+    background-color: white;
+    color: black;
+    border: #152F4F 1px solid;
+}
+
+.update_link {
+    border: #152F4F 1px solid;
+}

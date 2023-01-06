@@ -1,9 +1,10 @@
 import React from 'react';
+import SeeData from './../../../Login/Login/SeeData';
 
 const Thesis = () => {
     return (
         <div>
-            this is thesis page
+            <SeeData/>
         </div>
     );
 };

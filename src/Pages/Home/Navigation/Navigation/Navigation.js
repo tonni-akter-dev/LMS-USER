@@ -4,10 +4,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { NavLink, Link } from 'react-router-dom';
-import useAuth from '../../../hooks/useAuth';
+// import useAuth from '../../../hooks/useAuth';
 import './Navigation.css';
 const Navigation = () => {
-    const { user, logout } = useAuth();
+    // const { user, logout } = useAuth();
 
     const [show, setShow] = useState(false);
     const [show1, setShow1] = useState(false);
@@ -22,6 +22,12 @@ const Navigation = () => {
     }
     const hideDropdown1 = e => {
         setShow1(false);
+    }
+    // login logout matter
+    const isLoggedIn = window.localStorage.getItem('loggedIn');
+    const logout = () => {
+        window.localStorage.clear();
+        window.location.href = "/login"
     }
     return (
         <div>
@@ -85,27 +91,28 @@ const Navigation = () => {
                                     </NavLink>
                                 </NavDropdown.Item>
                             </NavDropdown>
-                            {user.email ? (
+                            {isLoggedIn==='true' ? (
                                 <NavDropdown
                                     className="navDesign1 dropdown"
                                     id="basic-nav-dropdown"
-                                    title={
-                                        <span className="navlink_design1"> {user.email && user.photoURL ? (
-                                            <img
-                                                src={user.photoURL}
-                                                className="ms-3 rounded-pill"
-                                                style={{ width: "30px" }}
-                                                alt=""
-                                            />
-                                        ) : (
-                                            <img
-                                                src="https://i.ibb.co/gPS4kB7/women.png"
-                                                className="ms-3 rounded-pill"
-                                                style={{ width: "50px" }}
-                                                alt=""
-                                            />
-                                        )}</span>
-                                    }
+                                    title="dropdown"
+                                    // title={
+                                    //     <span className="navlink_design1"> {user.email && user.photoURL ? (
+                                    //         <img
+                                    //             src={user.photoURL}
+                                    //             className="ms-3 rounded-pill"
+                                    //             style={{ width: "30px" }}
+                                    //             alt=""
+                                    //         />
+                                    //     ) : (
+                                    //         <img
+                                    //             src="https://i.ibb.co/gPS4kB7/women.png"
+                                    //             className="ms-3 rounded-pill"
+                                    //             style={{ width: "50px" }}
+                                    //             alt=""
+                                    //         />
+                                    //     )}</span>
+                                    // }
                                     show={show1}
                                     onMouseEnter={showDropdown1}
                                     onMouseLeave={hideDropdown1}
