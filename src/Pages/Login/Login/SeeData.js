@@ -27,6 +27,8 @@ export default class SeeData extends Component {
       });
   }
   render() {
+
+    
     return (
       <div>
        Full Name<h1>{this.state.userData.fullName}</h1>

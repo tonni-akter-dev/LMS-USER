@@ -88,7 +88,9 @@ function App() {
               <Route path={`/dashboard/catalouge/thesis`} element={<Thesis />} />
               <Route path="/dashboard/requestforABook/:id" element={<RequestForAbook />} />
               <Route path={`/dashboard/books/requestforAbook`} element={<RequestForAbook />} />
+
               <Route path={`/dashboard/updateProfile`} element={<UpdateProfile />} />
+              <Route path={`/dashboard/updateProfile/:id`} element={<UpdateProfile />} />
               {/* dashboard ends */}
             </Route>
             {/* user routes  ends */}
