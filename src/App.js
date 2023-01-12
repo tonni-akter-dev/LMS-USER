@@ -44,17 +44,13 @@ import SearchY from './Pages/Home/Resources/AllDatabase/AllDatabase/SearchY/Sear
 import SearchZ from './Pages/Home/Resources/AllDatabase/AllDatabase/SearchZ/SearchZ';
 import NewCollection from './Pages/Home/Resources/NewCollection/NewCollection';
 import TopCollection from './Pages/Home/Resources/TopCollection/TopCollection';
-// import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import UpdateProfile from './Pages/Dashboard/MyAccount/UpdateProfile';
 import LoginFromDB from './Pages/Login/Login/LoginFromDB';
 function App() {
   const isLoggedIn = window.localStorage.getItem('loggedIn')
-
   return (
     <div className="App">
-
-
       <AuthProvider>
         <Router>
           <Routes>
@@ -88,7 +84,6 @@ function App() {
               <Route path={`/dashboard/catalouge/thesis`} element={<Thesis />} />
               <Route path="/dashboard/requestforABook/:id" element={<RequestForAbook />} />
               <Route path={`/dashboard/books/requestforAbook`} element={<RequestForAbook />} />
-
               <Route path={`/dashboard/updateProfile`} element={<UpdateProfile />} />
               <Route path={`/dashboard/updateProfile/:id`} element={<UpdateProfile />} />
               {/* dashboard ends */}
@@ -97,7 +92,6 @@ function App() {
             {/* Catalog pages------------start */}
             <Route path="/searchcatalog" element={<SearchCatalog />} />
             <Route path="/searchcatalog" element={<SearchCatalog />} />
-
             {/* Catalog pages------------start */}
             {/* All Database routes  starts */}
             <Route path="letterA" element={<SearchA />} />
@@ -134,5 +128,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
