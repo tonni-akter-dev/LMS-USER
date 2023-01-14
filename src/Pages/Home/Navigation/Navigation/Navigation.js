@@ -63,7 +63,7 @@ const Navigation = () => {
                                         All Database
                                     </NavLink>
                                 </NavDropdown.Item>
-                                <NavDropdown.Item to="/newcollection">
+                                {/* <NavDropdown.Item to="/newcollection">
                                     <NavLink
                                         className=""
                                         style={{ color: "black", textDecoration: "none" }}
@@ -71,8 +71,8 @@ const Navigation = () => {
                                     >
                                         New Collection
                                     </NavLink>
-                                </NavDropdown.Item>
-                                <NavDropdown.Item to="/topcollection">
+                                </NavDropdown.Item> */}
+                                {/* <NavDropdown.Item to="/topcollection">
                                     <NavLink
                                         className=""
                                         style={{ color: "black", textDecoration: "none" }}
@@ -80,7 +80,7 @@ const Navigation = () => {
                                     >
                                         Top Collection
                                     </NavLink>
-                                </NavDropdown.Item>
+                                </NavDropdown.Item> */}
                                 <NavDropdown.Item to="/asklibrarian">
                                     <NavLink
                                         className=""

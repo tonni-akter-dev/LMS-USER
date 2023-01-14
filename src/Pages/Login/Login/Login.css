@@ -13,7 +13,7 @@
     height: 50px;
     margin: 10px;
     border: 3px solid black;
-    color: white !important;
+    /* color: white !important; */
     font-weight: bold;
     background-color: black;
     opacity: .6;
@@ -24,10 +24,13 @@
     padding-left: 40px;
     margin: 0 auto !important;
 }
+.loginform input{
+color: white !important;
+}
 
 .bg2 {
     background-color: black;
-    opacity: .6;
+    opacity: .7;
     width: 45%;
     margin: 0 auto;
     margin-top: 60px;
@@ -55,4 +58,9 @@ input[type=text] {
     justify-content: center;
     align-items: center;
     margin-top: 80px;
+}
+
+
+.form_input_design{
+    background-color: gray;
 }

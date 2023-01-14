@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
+import Email from "./Email";
 
 export default class MyAccount extends Component {
     constructor(props) {
         super(props);
+      
         this.state = {
             userData: "",
             myRequest: ""
@@ -24,7 +26,7 @@ export default class MyAccount extends Component {
         })
             .then((res) => res.json())
             .then((data) => {
-                // console.log(data, "userData");
+                console.log(data, "userData");
                 this.setState({ userData: data.data });
             });
         const url = `http://localhost:5000/requestedBook?instituteEmail=${this.state.userData.instituteEmail}`;
@@ -36,40 +38,10 @@ export default class MyAccount extends Component {
             });
 
     }
-
-   
-    // handle delete btn
-    // handleDeletBtn = (id) => {
-    //     Swal.fire({
-    //         title: "Are you sure?",
-    //         text: "You won't be able to revert this!",
-    //         icon: "warning",
-    //         showCancelButton: true,
-    //         confirmButtonColor: "#3085d6",
-    //         cancelButtonColor: "#d33",
-    //         confirmButtonText: "Yes, delete it!",
-    //     }).then((result) => {
-    //         if (result.isConfirmed) {
-    //             axios
-    //                 .delete(
-    //                     `https://pacific-falls-71669.herokuapp.com/allOrders/${id}`
-    //                 )
-    //                 .then((res) => {
-    //                     const remaining = orders.filter((order) => order._id !== id);
-    //                     setOrders(remaining);
-    //                 });
-    //             Swal.fire("Deleted!", "Your file has been deleted.", "success");
-    //         }
-    //     });
-    // };
     render() {
         return (
-
-            <div >
-
-
-
-                <h1 className='text-center'>MY PROFILE</h1>
+            <div>
+                <h1 className='text-center'>MY PROFILE </h1>
                 <div className='d-flex justify-content-center text-center'>
                     <table className="table width-table">
                         <thead>
@@ -127,7 +99,7 @@ export default class MyAccount extends Component {
                 <h1>My Books</h1>
 
 
-
+                {/* <Email /> */}
 
 
 

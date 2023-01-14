@@ -60,13 +60,6 @@ const Navigation2 = () => {
                             <NavLink
                                 className="navlink_design2"
 
-                                to="/topcollection"
-                            >
-                                Top Collection
-                            </NavLink>
-                            <NavLink
-                                className="navlink_design2"
-
                                 to="/asklibrarian"
                             >
                                 Ask a librarian?

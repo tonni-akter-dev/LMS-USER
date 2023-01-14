@@ -26,7 +26,7 @@ const Catalog = () => {
                                 <h2>Catalog</h2>
                             </div>
                             <div>
-                                <Navbar.Collapse id="basic-navbar-nav">
+                                {/* <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav>
                                         <NavLink className='navlink_design3 nav_bg_2' to="/search_catalog">Search Catalog</NavLink>
                                         <NavLink className='navlink_design3 nav_bg_2' to="/catagories">Categories </NavLink>
@@ -34,7 +34,7 @@ const Catalog = () => {
                                         <NavLink className='navlink_design3 nav_bg_2' to="/publishers">Publishers</NavLink>
                                         <NavLink className='navlink_design3 nav_bg_2' to="/tags">Tags</NavLink>
                                     </Nav>
-                                </Navbar.Collapse>
+                                </Navbar.Collapse> */}
                             </div>
 
                         </Container>
