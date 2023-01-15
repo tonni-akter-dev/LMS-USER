@@ -47,6 +47,7 @@ import TopCollection from './Pages/Home/Resources/TopCollection/TopCollection';
 import Register from './Pages/Login/Register/Register';
 import UpdateProfile from './Pages/Dashboard/MyAccount/UpdateProfile';
 import LoginFromDB from './Pages/Login/Login/LoginFromDB';
+import Login from './Pages/Login/Login/Login';
 function App() {
   const isLoggedIn = window.localStorage.getItem('loggedIn')
   return (
@@ -66,7 +67,7 @@ function App() {
             <Route path="/newcollection" element={<NewCollection />} />
             <Route path="/alldatabase" element={<AllDatabase />} />
             {/* resouces route ends*/}
-            <Route path="/login" element={<LoginFromDB />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/LoginFromDB" element={isLoggedIn === "true" ? <Dashboard /> : <LoginFromDB />} />
             <Route path="/register" element={<Register />} />
             {/* dashboard starts */}

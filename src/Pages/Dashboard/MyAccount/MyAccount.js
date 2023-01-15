@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
-import Email from "./Email";
+
 
 export default class MyAccount extends Component {
     constructor(props) {
@@ -22,6 +21,7 @@ export default class MyAccount extends Component {
             },
             body: JSON.stringify({
                 token: window.localStorage.getItem("token"),
+                
             }),
         })
             .then((res) => res.json())
@@ -39,11 +39,13 @@ export default class MyAccount extends Component {
 
     }
     render() {
+        // const email=this.props.email;
+        // console.log(email);
         return (
             <div>
                 <h1 className='text-center'>MY PROFILE </h1>
                 <div className='d-flex justify-content-center text-center'>
-                    <table className="table width-table">
+                    {/* <table className="table width-table">
                         <thead>
                             <tr>
                                 <th scope="col">
@@ -90,17 +92,11 @@ export default class MyAccount extends Component {
                                 </th>
                             </tr>
                         </tbody>
-                    </table>
-
-
+                    </table> */}
                 </div>
 
                 {/* issubook for user request */}
-                <h1>My Books</h1>
-
-
-                {/* <Email /> */}
-
+      
 
 
 

@@ -25,6 +25,8 @@ const Navigation = () => {
     }
     // login logout matter
     const isLoggedIn = window.localStorage.getItem('loggedIn');
+    // const loginUser = JSON.parse(localStorage.getItem("user"));
+    // console.log(loginUser)
     const logout = () => {
         window.localStorage.clear();
         window.location.href = "/login"
