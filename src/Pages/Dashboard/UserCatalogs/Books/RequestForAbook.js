@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
-import './Book.css'
+import './Book.css';
 const RequestForAbook = () => {
     let { id } = useParams();
     const [issueDetail, setIssueDetail] = useState({});
@@ -46,7 +46,7 @@ const RequestForAbook = () => {
                             </Form.Group>
                             <Form.Group as={Col} sm='12' md='6'>
                                 <Form.Label>Book Title</Form.Label>
-                                <Form.Control type="text" name='title' defaultValue={issueDetail.title} placeholder="Books Title" required {...register("title")} />
+                                <Form.Control type="text" name='title' defaultValue={issueDetail?.title} placeholder="Books Title" required {...register("title")} />
                             </Form.Group>
                         </Row>
                         <Row className="">

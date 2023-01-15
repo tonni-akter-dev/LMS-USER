@@ -30,7 +30,7 @@ const Login = () => {
                 // set token
                 localStorage.setItem('token', result.success.token);
                 localStorage.setItem('user', result.success.user);
-                // window.location.href = "/dashboard";
+                window.location.href = "/dashboard";
                 setError("")
             } else {
                 console.log(result);

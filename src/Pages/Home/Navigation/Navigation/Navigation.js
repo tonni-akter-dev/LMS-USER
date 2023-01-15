@@ -8,7 +8,6 @@ import { NavLink, Link } from 'react-router-dom';
 import './Navigation.css';
 const Navigation = () => {
     // const { user, logout } = useAuth();
-
     const [show, setShow] = useState(false);
     const [show1, setShow1] = useState(false);
     const showDropdown = (e) => {
@@ -97,7 +96,7 @@ const Navigation = () => {
                                 <NavDropdown
                                     className="navDesign1 dropdown"
                                     id="basic-nav-dropdown"
-                                    title="dropdown"
+                                    title="Profile"
                                     // title={
                                     //     <span className="navlink_design1"> {user.email && user.photoURL ? (
                                     //         <img

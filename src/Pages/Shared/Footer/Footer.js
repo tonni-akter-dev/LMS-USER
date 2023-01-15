@@ -1,17 +1,14 @@
 import React from 'react';
-import { NavLink } from 'react-bootstrap';
 import './Footer.css'
 const Footer = () => {
   return (
     <div className='mt-5'>
       <footer id="footer" className="footer-1 mt-5">
-        <div className="main-footer widgets-dark typo-light">
+        <div className="main-footer widgets-dark typo-light pt-5">
           <div className="container">
             <div className="row">
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="widget subscribe no-box">
-                 
-
                   <h5 className="widget-title">Presidency University<span></span></h5>
                   <p>Presidency University is an institution dedicated to excellence in teaching, research, training, and community services. </p>
                 </div>
@@ -25,13 +22,10 @@ const Footer = () => {
               </div>
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="widget no-box">
-                  <h5 className="widget-title">CONTACT US<span></span></h5>
+                  <h5 className="widget-title">Visit Pu<span></span></h5>
                   <ul className="thumbnail-widget">
                     <li>
-                      <div className="thumb-content"><a href="http://www.presidency.edu.bd/">PU Website</a></div>
-                    </li>
-                    <li>
-                      <div className="thumb-content"><a href="#.">Top Leaders</a></div>
+                      <div className="thumb-content"><a href="http://www.presidency.edu.bd/" className="text-decoration-none text-light">PU Website</a></div>
                     </li>
                   </ul>
                 </div>
@@ -40,7 +34,7 @@ const Footer = () => {
                 <div className="widget no-box">
                   <h5 className="widget-title">Contact Us<span></span></h5>
 
-                  <p><a href="mailto:info@domain.com" title="glorythemes">library@pu.edu.bd</a></p>
+                  <p><a href="mailto:info@domain.com" title="glorythemes" className="text-decoration-none text-light">library@pu.edu.bd</a></p>
                   <ul className="social-footer2">
                   </ul>
                 </div>

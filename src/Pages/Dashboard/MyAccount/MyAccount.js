@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 
 
 export default class MyAccount extends Component {
@@ -45,7 +46,7 @@ export default class MyAccount extends Component {
             <div>
                 <h1 className='text-center'>MY PROFILE </h1>
                 <div className='d-flex justify-content-center text-center'>
-                    {/* <table className="table width-table">
+                    <table className="table width-table">
                         <thead>
                             <tr>
                                 <th scope="col">
@@ -92,7 +93,7 @@ export default class MyAccount extends Component {
                                 </th>
                             </tr>
                         </tbody>
-                    </table> */}
+                    </table>
                 </div>
 
                 {/* issubook for user request */}
