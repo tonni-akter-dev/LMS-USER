@@ -7,21 +7,26 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import useAuth from '../../../hooks/useAuth';
 import '../Navigation/Navigation.css'
 const Navigation2 = () => {
-    const { user, logout } = useAuth();
+    // const { user } = useAuth();
+    const isLoggedIn = window.localStorage.getItem('loggedIn');
+    // const [show, setShow] = useState(false);
+    // const [show1, setShow1] = useState(false);
+    // const showDropdown = (e) => {
+    //     setShow(!show);
+    // }
+    // const hideDropdown = e => {
+    //     setShow(false);
+    // }
+    // const showDropdown1 = (e) => {
+    //     setShow1(!show1);
+    // }
+    // const hideDropdown1 = e => {
+    //     setShow1(false);
+    // }
 
-    const [show, setShow] = useState(false);
-    const [show1, setShow1] = useState(false);
-    const showDropdown = (e) => {
-        setShow(!show);
-    }
-    const hideDropdown = e => {
-        setShow(false);
-    }
-    const showDropdown1 = (e) => {
-        setShow1(!show1);
-    }
-    const hideDropdown1 = e => {
-        setShow1(false);
+    const logout = () => {
+        window.localStorage.clear();
+        window.location.href = "/login"
     }
     return (
         <div>
@@ -33,8 +38,12 @@ const Navigation2 = () => {
 
                     {/* jhgfyujhvy8u */}
                     <Nav className="ms-auto">
-                        <NavLink className='navlink_design2' to="/login"><button className='btn btn-dark nav2-login-btn'>Login</button>
-                        </NavLink>
+                        {isLoggedIn === 'true' ? (
+                            // <NavLink className="navDesign1 dropdown text-dark" to="/dashboard/myaccount">
+                            <button type="" className='btn btn-dark' onClick={logout}>Log Out</button>
+                            // </NavLink>
+                        ) : (
+                            <NavLink className='navlink_design text-dark' to="/login"> <button type="">Login</button></NavLink>)}
                     </Nav>
                     {/* jhgfyujhvy8u */}
                 </Container>
@@ -48,8 +57,6 @@ const Navigation2 = () => {
                             <NavLink className='navlink_design2' to="/about">About </NavLink>
                             <NavLink className='navlink_design2' to="/catalog">Catalog </NavLink>
                             <NavLink className='navlink_design2' to="/searchcatalog">Search Catalog </NavLink>
-
-
                             <NavLink
                                 className="navlink_design2"
 
