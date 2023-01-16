@@ -7,13 +7,17 @@ import { NavLink } from 'react-router-dom';
 import './Catalog.css';
 const Catalog = () => {
     const [allBooks, setAllBooks] = useState([]);
+    const [isLoaded, setIsLoaded] = useState(true);
     useEffect(() => {
         const url = `http://localhost:5000/allBooks`;
         fetch(url)
             .then((res) => res.json())
-            .then((data) => setAllBooks(data));
+            .then((data) => {
+                setAllBooks(data)
+                setIsLoaded(false)
+            });
     }, []);
-
+    
     return (
         <div>
             <Navigation2 />
@@ -52,6 +56,12 @@ const Catalog = () => {
                                     <th scope="col">Copies</th>
                                 </tr>
                             </thead>
+                            {
+                    isLoaded ? (
+                        <div className="spinner-border text-secondary  spinner ">
+                            <span className="sr-only">Loading...</span>
+                        </div>
+                    ) :
                             <tbody>
 
                                 {allBooks.map(book => (
@@ -71,7 +81,7 @@ const Catalog = () => {
                                     </tr>
                                 ))
                                 }
-                            </tbody>
+                            </tbody>}
                         </table>
                     </div>
 

@@ -21,7 +21,6 @@ const ViewThesis = () => {
                         </tr>
                     </thead>
                     <tbody>
-                    
                         <tr>
                             <th scope="row">Thesis Title: {viewThesis.ThesisTitle}</th>
                         </tr>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './HomeBooks.css'
 const HomeBooks = () => {
     const [homeBooks, setHomeBooks] = useState([]);
+    const [isLoaded, setIsLoaded] = useState(true);
     useEffect(() => {
         const url = `http://localhost:5000/homebooks`;
         fetch(url)
@@ -44,7 +45,7 @@ https://i.ibb.co/tsNq57c/1.jpg
                             ))
                         }
                     </div>
-                    <Link to='/' className=' ms-auto homebooks_btn' > <h4 class="finding_books">More Books</h4></Link>
+                    <Link to='/catalog' className=' ms-auto homebooks_btn' > <h4 class="finding_books">More Books</h4></Link>
                 </div>
             </div>
         </div >
