@@ -4,12 +4,16 @@ import { Link } from 'react-router-dom';
 const Books = () => {
     const [allBooks, setAllBooks] = useState([]);
     const [state, setState] = useState({ type: '', branch: '', search_field: "title", search_text: "" });
-    const [searchValue, setSearchValue] = useState([])
+    const [searchValue, setSearchValue] = useState([]);
+    const [isLoaded, setIsLoaded] = useState(true);
     useEffect(() => {
         const url = `http://localhost:5000/allBooks`;
         fetch(url)
             .then((res) => res.json())
-            .then((data) => setAllBooks(data));
+            .then((data) => {
+                setAllBooks(data)
+                setIsLoaded(false)
+            });
     }, []);
 
     const handleChange = (e) => {
@@ -122,36 +126,45 @@ const Books = () => {
                                         <th scope="col">Actions</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    {allBooks.map(book => (
-                                        <tr>
-                                            <td className=''>
-                                                <img height="100px" src={book.img} alt="" />
-                                            </td>
-                                            <td><span className='text_bold'>
-                                                <Link to={`/dashboard/requestforABook/${book._id}`}>{book.title}</Link>
-                                            </span>
-                                                <br />
-                                                <span>Year: {book.publicationYear} </span> <br />
-                                                <span>Call No: {book.callNo} </span>
-                                            </td>
-                                            <td>{book.authors}</td>
-                                            <td>{book.publisher}</td>
-                                            <td>{book.type}</td>
-                                            <td className='text-center'>{book.copies}</td>
-                                            <td className="text-center">
-                                                {/* <Link to={`/viewBook/${book._id}`}
+
+                                {
+                                    isLoaded ? (
+                                        <div className="spinner-border text-secondary  spinner ">
+                                            <span className="sr-only">Loading...</span>
+                                        </div>
+                                    ) :
+
+                                        <tbody>
+                                            {allBooks.map(book => (
+                                                <tr>
+                                                    <td className=''>
+                                                        <img height="100px" src={book.img} alt="" />
+                                                    </td>
+                                                    <td><span className='text_bold'>
+                                                        <Link to={`/dashboard/requestforABook/${book._id}`}>{book.title}</Link>
+                                                    </span>
+                                                        <br />
+                                                        <span>Year: {book.publicationYear} </span> <br />
+                                                        <span>Call No: {book.callNo} </span>
+                                                    </td>
+                                                    <td>{book.authors}</td>
+                                                    <td>{book.publisher}</td>
+                                                    <td>{book.type}</td>
+                                                    <td className='text-center'>{book.copies}</td>
+                                                    <td className="text-center">
+                                                        {/* <Link to={`/viewBook/${book._id}`}
                                                     className='btn btn-outline-dark btn-sm'
                                                 >View</Link> */}
 
-                                                <Link to={`/dashboard/requestforABook/${book._id}`}
-                                                    className='btn btn-dark btn-sm mt-2'
-                                                >Issue</Link>
-                                            </td>
-                                        </tr>
-                                    ))
-                                    }
-                                </tbody>
+                                                        <Link to={`/dashboard/requestforABook/${book._id}`}
+                                                            className='btn btn-dark btn-sm mt-2'
+                                                        >Issue</Link>
+                                                    </td>
+                                                </tr>
+                                            ))
+                                            }
+                                        </tbody>
+                                }
                             </table>
                         </div>
                     ) : (
