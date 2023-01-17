@@ -16,7 +16,7 @@ const Footer = () => {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="widget no-box">
                   <h5 className="widget-title">Get Started<span></span></h5>
-                  <p>Get access to your full Training and Marketing Suite.</p>
+                  <p>Get started with presidency University Library </p>
                   <a className="btn" href="/" target="_blank">Subscribe Now</a>
                 </div>
               </div>
