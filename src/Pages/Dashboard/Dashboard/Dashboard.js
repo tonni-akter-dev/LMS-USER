@@ -10,20 +10,15 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import StarBorder from '@material-ui/icons/StarBorder';
-
 const useStyles = makeStyles((theme) => ({
   nested: {
     paddingLeft: theme.spacing(4),
     marginBottom: 0
   },
 }));
-
 const Dashboard = () => {
-  // const { user, admin, logout } = useAuth();
-  
   const classNamees = useStyles();
   const [open, setOpen] = React.useState(true);
-
   const handleClick = () => {
     setOpen(!open);
   };
@@ -34,11 +29,11 @@ const Dashboard = () => {
           <div className="text-center">
             <img height="50px" className="mx-auto" src="https://i.ibb.co/y48PY0V/pu-logo-1.png" alt="" />
             <h5><Link to="/" style={{
-                    textDecoration: "none",
-                    fontWeight: "bold",
-                    display: "block",
-                    color: "white",
-                  }}>Presidency University Library</Link></h5>
+              textDecoration: "none",
+              fontWeight: "bold",
+              display: "block",
+              color: "white",
+            }}>Presidency University Library</Link></h5>
           </div>
           <br />
           <div className="text-light">
@@ -68,7 +63,6 @@ const Dashboard = () => {
                 <ExpandMore />
               </ListItem>
               {/* dashboard icon ends */}
-
               {/* CATALOGUE */}
               <ListItem button onClick={handleClick}>
                 <ListItemIcon>
@@ -134,7 +128,6 @@ const Dashboard = () => {
                   </ListItem>
                 </List>
               </Collapse>
-             
               {/* My Account starts */}
               <ListItem button>
                 <ListItemIcon>
@@ -155,23 +148,13 @@ const Dashboard = () => {
                 <ExpandMore />
               </ListItem>
               {/* My Account ends */}
-
-
-
-
-
             </List>
-
             {/* catalog dropdown */}
-
-
+            <button type="" className='btn btn-outline-light text-dark mx-5 my-5 bbtn'>
+              <Link to="/" className='nav_design2'>Back to Home</Link>
+            </button>
           </div>
-
-
         </div>
-
-
-
         {/* dashport */}
         <div className="col-lg-10">
           <Outlet />

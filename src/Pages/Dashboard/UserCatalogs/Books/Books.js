@@ -15,7 +15,6 @@ const Books = () => {
                 setIsLoaded(false)
             });
     }, []);
-
     const handleChange = (e) => {
         const name = e.target.name;
         const value = e.target.value;
@@ -141,7 +140,7 @@ const Books = () => {
                                                         <img height="100px" src={book.img} alt="" />
                                                     </td>
                                                     <td><span className='text_bold'>
-                                                        <Link to={`/dashboard/requestforABook/${book._id}`}>{book.title}</Link>
+                                                        <Link to={`/dashboard/reqFromBooks/${book._id}`} className="text-dark">{book.title}</Link>
                                                     </span>
                                                         <br />
                                                         <span>Year: {book.publicationYear} </span> <br />
@@ -156,7 +155,7 @@ const Books = () => {
                                                     className='btn btn-outline-dark btn-sm'
                                                 >View</Link> */}
 
-                                                        <Link to={`/dashboard/requestforABook/${book._id}`}
+                                                        <Link to={`/dashboard/reqFromBooks/${book._id}`}
                                                             className='btn btn-dark btn-sm mt-2'
                                                         >Issue</Link>
                                                     </td>
@@ -188,7 +187,7 @@ const Books = () => {
                                                 <img height="100px" src={book.img} alt="" />
                                             </td>
                                             <td><span className='text_bold'>
-                                                <Link to={`/dashboard/requestforABook/${book._id}`}>{book.title}</Link>
+                                                <Link to={`/dashboard/reqFromBooks/${book._id}`}>{book.title}</Link>
                                             </span>
                                                 <br />
                                                 <span>Year: {book.publicationYear} </span> <br />
@@ -202,7 +201,7 @@ const Books = () => {
                                                 {/* <Link to={`/viewBook/${book._id}`}
                                                     className='btn btn-outline-dark btn-sm'
                                                 >View</Link> */}
-                                                <Link to={`/dashboard/requestforABook/${book._id}`}
+                                                <Link to={`/dashboard/reqFromBooks/${book._id}`}
                                                     className='btn btn-dark btn-sm'
                                                 >Issue</Link>
                                             </td>

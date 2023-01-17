@@ -61,3 +61,17 @@
     padding: 10px 150px;
 
 }
+.nav_design2{
+text-decoration: none;
+color: white;
+} 
+.bbtn Link:hover{
+    color: black;
+
+}
+
+.dbLinks{
+    /* text-decoration: none; */
+    color: black;
+    font-weight: bold;
+}

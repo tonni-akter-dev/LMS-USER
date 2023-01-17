@@ -40,15 +40,20 @@ const UpdateProfile = () => {
             .put(
                 `http://localhost:5000/userData/${id}`,
                 data
-            ); Swal.fire('Profile Update Successfully')
+            );
+        Swal.fire('Profile Update Successfully');
+        window.location.href = '/dashboard/myaccount';
     };
     console.log(user);
 
 
     return (
         <div>
+            <div className='my-3'>
+                <span><Link to='/dashboard' className='dbLinks'>dashboard</Link></span> /<span><Link to='/dashboard/myaccount' className='dbLinks mx-2'>My Account</Link></span>/<span><Link to={`/dashboard/updateProfile/${id}`} className='dbLinks mx-2'>Update Profile</Link></span>
+            </div>
             <div className='d-flex justify-content-center'>
-                <Card bg='' style={{ width: '100%' }} className="text-white py-3">
+                <Card bg='' style={{ width: '100%' }} className="text-white py-3 mt-5">
                     <Card.Img variant="top" className="w-25 mx-auto rounded" />
                     <Card.Body>
                         <Card.Text>
@@ -70,6 +75,7 @@ const UpdateProfile = () => {
                                         <Form.Group as={Col} sm='12' md='6'>
                                             <Form.Label>User Type</Form.Label>
                                             <Form.Select name='userType' aria-label="Default select example" defaultValue={user.userType} onChange={handleChange}>
+                                                <option value="all">All</option>
                                                 <option value="student">Student</option>
                                                 <option value="faculty">Faculty</option>
                                             </Form.Select>

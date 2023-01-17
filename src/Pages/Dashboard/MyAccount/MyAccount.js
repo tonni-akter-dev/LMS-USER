@@ -61,14 +61,14 @@ export default class MyAccount extends Component {
                             </tr>
                             <tr>
                                 <th scope="row">
-                                    Name:
+                                    Name:  {this.state.userData.fullName}
                                 </th>
                             </tr>
                             <tr>
-                                <th scope="row">Institute ID: {this.state.userData.instituteId}</th>
+                                <th scope="row">Institute ID:  {this.state.userData.instituteId}</th>
                             </tr>
                             <tr>
-                                <th scope="row">Institute Email: {this.state.userData.instituteEmail}</th>
+                                <th scope="row">Institute Email: { this.state.userData.instituteEmail}</th>
                             </tr>
                             <tr>
                                 <th scope="row">Personal Email: {this.state.userData.personalEmail}</th>

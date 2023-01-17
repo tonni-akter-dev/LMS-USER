@@ -9,6 +9,8 @@ const DashboardPort = () => {
     }
     return (
         <div>
+
+
             <div>
                 <button className='btn notice_board_btn'>
                     <Link to="/noticeboard" className='navlink_design1'>Notice Board</Link>
@@ -20,6 +22,8 @@ const DashboardPort = () => {
                 ) : (
                     <NavLink className='navlink_design text-dark' to="/login"> <button type="">Login</button></NavLink>)}
             </div>
+
+         
             {/* second part */}
             <div className='mt-5'>
                 <table className="table table-bordered texts" >

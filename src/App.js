@@ -6,6 +6,7 @@ import DashboardPort from './Pages/Dashboard/DashboardPort/DashboardPort';
 import MyAccount from './Pages/Dashboard/MyAccount/MyAccount';
 import Books from './Pages/Dashboard/UserCatalogs/Books/Books';
 import RequestForAbook from './Pages/Dashboard/UserCatalogs/Books/RequestForAbook';
+import ReqFromBooks from './Pages/Dashboard/UserCatalogs/Books/ReqFromBooks';
 import Journals from './Pages/Dashboard/UserCatalogs/Journals/Journals';
 import Thesis from './Pages/Dashboard/UserCatalogs/Thesis/Thesis';
 import About from './Pages/Home/About/About';
@@ -85,7 +86,7 @@ function App() {
               <Route path={`/dashboard/catalouge/journals`} element={<Journals />} />
               <Route path={`/dashboard/catalouge/thesis`} element={<Thesis />} />
               <Route path={`/dashboard/viewThesis/:id`} element={<ViewThesis />} />
-              <Route path="/dashboard/requestforABook/:id" element={<RequestForAbook />} />
+              <Route path="/dashboard/reqFromBooks/:id" element={<ReqFromBooks />} />
               <Route path={`/dashboard/books/requestforAbook`} element={<RequestForAbook />} />
               <Route path={`/dashboard/updateProfile`} element={<UpdateProfile />} />
               <Route path={`/dashboard/updateProfile/:id`} element={<UpdateProfile />} />
