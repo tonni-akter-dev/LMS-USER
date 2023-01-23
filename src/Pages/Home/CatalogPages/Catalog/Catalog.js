@@ -52,8 +52,8 @@ const Catalog = () => {
                                     <th scope="col">Title</th>
                                     <th scope="col">Authors/Editors</th>
                                     <th scope="col">Publisher</th>
-                                    <th scope="col">Type</th>
-                                    <th scope="col">Copies</th>
+                                    <th scope="col">Category</th>
+                                    {/* <th scope="col">Copies</th> */}
                                 </tr>
                             </thead>
                             {
@@ -76,8 +76,8 @@ const Catalog = () => {
                                         </td>
                                         <td>{book.authors}</td>
                                         <td>{book.publisher}</td>
-                                        <td>{book.type}</td>
-                                        <td className='text-center'>{book.copies}</td>
+                                        <td>{book.category}</td>
+                                        {/* <td className='text-center'>{book.copies}</td> */}
                                     </tr>
                                 ))
                                 }

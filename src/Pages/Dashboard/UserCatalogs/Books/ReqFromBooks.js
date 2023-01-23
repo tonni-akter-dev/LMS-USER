@@ -18,7 +18,7 @@ const ReqFromBooks = () => {
     // const date = current.getTime();
 
     const onSubmit = data => {
-        fetch('http://localhost:5000/issueRequestForABook', {
+        fetch('http://localhost:5000/userRequestForABook', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -28,9 +28,9 @@ const ReqFromBooks = () => {
             .then(res => res.json())
             .then(result => {
                 if (result.acknowledged) {
-                    Swal.fire('Book Added Successfully')
+                    Swal.fire('Request sent Successfully')
                     reset()
-                    window.location.href='/';
+                    window.location.href = '/';
                 }
             })
     };
@@ -39,6 +39,8 @@ const ReqFromBooks = () => {
             .then((res) => res.json())
             .then((data) => setIssueDetail(data));
     }, [id]);
+    const current = new Date();
+    const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
     return (
         <div>
             <Container fluid>
@@ -53,7 +55,7 @@ const ReqFromBooks = () => {
                             </Form.Group>
                             <Form.Group as={Col} sm='12' md='6'>
                                 <Form.Label>Book Title <span className="text-danger">*</span></Form.Label>
-                                <Form.Control type="text" name='title'  defaultValue={issueDetail?.title} placeholder="Books Title" required {...register("title")} />
+                                <Form.Control type="text" name='title' defaultValue={issueDetail?.title} placeholder="Books Title" required {...register("title")} />
                             </Form.Group>
                         </Row>
                         <Row className="">
@@ -63,7 +65,7 @@ const ReqFromBooks = () => {
                             </Form.Group>
                             <Form.Group as={Col} sm='12' md='6'>
                                 <Form.Label>Author <span className="text-danger">*</span></Form.Label>
-                                <Form.Control type="text" name='autor'  defaultValue={issueDetail.authors} placeholder="Author Name" required {...register("author")} />
+                                <Form.Control type="text" name='autor' defaultValue={issueDetail.authors} placeholder="Author Name" required {...register("author")} />
                             </Form.Group>
                         </Row>
                         <Row className="">
@@ -77,7 +79,7 @@ const ReqFromBooks = () => {
                             </Form.Group>
                             <Form.Group as={Col} sm='12' md='6'>
                                 <Form.Label>Accession Number <span className="text-danger">*</span></Form.Label>
-                                <Form.Control type="text" name='accession'  defaultValue="1" placeholder="Accession Number" required {...register("accessionNumber")} />
+                                <Form.Control type="text" name='accession' defaultValue="1" placeholder="Accession Number" required {...register("accessionNumber")} />
                             </Form.Group>
                         </Row>
                         <Row>
@@ -87,7 +89,7 @@ const ReqFromBooks = () => {
                             </Form.Group>
                             <Form.Group as={Col} sm='12' md='6'>
                                 <Form.Label>Edition <span className="text-danger">*</span></Form.Label>
-                                <Form.Control type="text" name='editon'  defaultValue={issueDetail.edition} placeholder="Edition" required {...register("edition")} />
+                                <Form.Control type="text" name='editon' defaultValue={issueDetail.edition} placeholder="Edition" required {...register("edition")} />
                             </Form.Group>
                         </Row>
                         <Row className="">
@@ -97,7 +99,8 @@ const ReqFromBooks = () => {
                             </Form.Group>
                             <Form.Group as={Col} sm='12' md='6'>
                                 <Form.Label>Issue Date <span className="text-danger">*</span></Form.Label>
-                                <input type="date" id="birthday" className='datepicker text-dark' name="birthday" {...register("issueDate")} />
+                                {/* <input type="date" id="birthday" className='datepicker text-dark' name="birthday" {...register("issueDate")} /> */}
+                                <Form.Control id="dateRequired" defaultValue={new Date().toISOString().substr(0, 10)} type="date" name="dateRequired" className='datepicker text-dark' {...register("issueDate")} />
                             </Form.Group>
                         </Row>
                         <Row className="">
