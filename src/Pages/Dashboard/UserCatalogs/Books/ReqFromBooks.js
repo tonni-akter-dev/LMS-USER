@@ -17,22 +17,25 @@ const ReqFromBooks = () => {
     // console.log(currentDate);
     // const date = current.getTime();
 
+
     const onSubmit = data => {
-        fetch('http://localhost:5000/userRequestForABook', {
-            method: "POST",
-            headers: {
-                "content-type": "application/json"
-            },
-            body: JSON.stringify(data)
-        })
-            .then(res => res.json())
-            .then(result => {
-                if (result.acknowledged) {
-                    Swal.fire('Request sent Successfully')
-                    reset()
-                    window.location.href = '/';
-                }
+        const formData = { ...data, book: issueDetail };
+            fetch('http://localhost:5000/userRequestForABook', {
+                method: "POST",
+                headers: {
+                    "content-type": "application/json"
+                },
+                body: JSON.stringify(formData)
             })
+                .then(res => res.json())
+                .then(result => {
+                    if (result.acknowledged) {
+                        Swal.fire('Request sent Successfully')
+                        
+                        reset()
+                        window.location.href = '/';
+                    }
+                })
     };
     useEffect(() => {
         fetch(`http://localhost:5000/requestforABook/${id}`)
@@ -55,7 +58,7 @@ const ReqFromBooks = () => {
                             </Form.Group>
                             <Form.Group as={Col} sm='12' md='6'>
                                 <Form.Label>Book Title <span className="text-danger">*</span></Form.Label>
-                                <Form.Control type="text" name='title' defaultValue={issueDetail?.title} placeholder="Books Title" required {...register("title")} />
+                                <Form.Control type="text" disabled defaultValue={issueDetail?.title}  />
                             </Form.Group>
                         </Row>
                         <Row className="">
@@ -65,7 +68,7 @@ const ReqFromBooks = () => {
                             </Form.Group>
                             <Form.Group as={Col} sm='12' md='6'>
                                 <Form.Label>Author <span className="text-danger">*</span></Form.Label>
-                                <Form.Control type="text" name='autor' defaultValue={issueDetail.authors} placeholder="Author Name" required {...register("author")} />
+                                <Form.Control type="text" disabled defaultValue={issueDetail.authors}  />
                             </Form.Group>
                         </Row>
                         <Row className="">
@@ -79,7 +82,7 @@ const ReqFromBooks = () => {
                             </Form.Group>
                             <Form.Group as={Col} sm='12' md='6'>
                                 <Form.Label>Accession Number <span className="text-danger">*</span></Form.Label>
-                                <Form.Control type="text" name='accession' defaultValue="1" placeholder="Accession Number" required {...register("accessionNumber")} />
+                                <Form.Control type="text" disabled defaultValue={issueDetail.accessionNumber}  />
                             </Form.Group>
                         </Row>
                         <Row>
@@ -89,7 +92,7 @@ const ReqFromBooks = () => {
                             </Form.Group>
                             <Form.Group as={Col} sm='12' md='6'>
                                 <Form.Label>Edition <span className="text-danger">*</span></Form.Label>
-                                <Form.Control type="text" name='editon' defaultValue={issueDetail.edition} placeholder="Edition" required {...register("edition")} />
+                                <Form.Control type="text" disabled defaultValue={issueDetail.edition} />
                             </Form.Group>
                         </Row>
                         <Row className="">

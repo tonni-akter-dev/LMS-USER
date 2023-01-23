@@ -30,13 +30,13 @@ export default class MyAccount extends Component {
                 console.log(data, "userData");
                 this.setState({ userData: data.data });
             });
-        const url = `http://localhost:5000/requestedBook?instituteEmail=${this.state.userData.instituteEmail}`;
-        fetch(url)
-            .then((res) => res.json())
-            .then((data) => {
-                console.log({ myRequest: data })
-                this.setState({ myRequest: data })
-            });
+        // const url = `http://localhost:5000/requestedBook?instituteEmail=${this.state.userData.instituteEmail}`;
+        // fetch(url)
+        //     .then((res) => res.json())
+        //     .then((data) => {
+        //         console.log({ myRequest: data })
+        //         this.setState({ myRequest: data })
+        //     });
 
     }
     render() {
